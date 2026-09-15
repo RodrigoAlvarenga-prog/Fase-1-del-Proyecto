@@ -38,6 +38,8 @@ def validarStockMinimo(cantidad, minimo=5):
     Retorna:
         bool: True si el stock está bajo (cantidad < minimo), False si no.
     """
+    if minimo < 0:
+        raise ValueError("El stock mínimo no puede ser negativo")
     return cantidad < minimo
 
 
