@@ -21,6 +21,9 @@ def calcularValorTotal(precio, cantidad):
     Retorna:
         float: precio * cantidad, redondeado a 2 decimales.
     """
+    
+    if precio < 0 or cantidad < 0:
+        raise ValueError("El precio y la cantidad no pueden ser negativos")
     return round(precio * cantidad, 2)
 
 
